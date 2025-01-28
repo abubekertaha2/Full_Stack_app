@@ -41,7 +41,7 @@ app.post("/add_user", (req, res) => {
 });
 
 // Endpoint for retrieving all students
-app.get("/students", (req, res) => {
+app.get("/sql5759915", (req, res) => {
   const sql = "SELECT * FROM student_details";
   
   db.query(sql, (err, result) => {

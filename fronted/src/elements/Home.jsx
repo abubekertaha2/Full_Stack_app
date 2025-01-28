@@ -13,7 +13,7 @@ function Home() {
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                const res = await axios.get('/students');
+                const res = await axios.get('/sql5759915');
                 const sortedData = res.data.sort((a, b) => a.name.localeCompare(b.name));
                 setData(sortedData);
                 setError('');
@@ -25,10 +25,10 @@ function Home() {
 
         fetchStudents();
     }, []);
-    
+
     const handleDelete = async (id) => {
         try {
-            const res = await axios.delete(`/delete/${id}`); // API call to delete student
+            const res = await axios.delete(`/delete/${id}`);
             if (res.data.success) {
                 setData(prevData => prevData.filter(student => student.id !== id));
             }
